@@ -1,0 +1,325 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500;700&display=swap');
+
+body {
+    background-color: #FFECEF;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    color: #3E0012;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #770029;
+    color: white;
+    padding: 20px 5px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1em;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    width: 100%;
+    max-width: 750px;
+    margin-top: 60px;
+    margin-bottom: 0;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.couple-photo {
+    display: block;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer-section {
+    background-color: white;
+    padding: 18px 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.timer-section h2 {
+    color: #B50043;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.timer-display {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.timer-display div {
+    text-align: center;
+}
+
+.timer-display span {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #F7005F;
+    line-height: 1;
+    margin-bottom: 2px;
+    min-width: 55px;
+    text-align: center;
+}
+
+.timer-display .label {
+    font-size: 0.9em;
+    color: #FFB6C1;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.date-info {
+    font-size: 0.8em;
+    color: #F7005F;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.timer-section-date {
+    background-color: white;
+    padding: 15px 15px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.timer-section-date h2,
+.timer-section-date .summary-phrase {
+    color: #B50043;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.summary-values-vertical {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.summary-values-vertical div {
+    text-align: center;
+}
+
+.summary-values-vertical span {
+    font-size: 2em;
+    font-weight: 700;
+    color: #F7005F;
+    line-height: 1;
+    margin-bottom: 2px;
+    min-width: 45px;
+}
+
+.summary-values-vertical .label {
+    font-size: 0.85em;
+    color: #FFB6C1;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.timer-section::before,
+.timer-section::after {
+    content: '💖';
+    font-size: 3em;
+    opacity: 0.50;
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.timer-section::before {
+    top: -15px;
+    left: -15px;
+    transform: rotate(-30deg);
+}
+
+.timer-section::after {
+    bottom: -15px;
+    right: -15px;
+    transform: rotate(20deg);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 8px 5px;
+    }
+    header h1 {
+        font-size: 1.6em;
+    }
+    main {
+        margin-top: 55px;
+        gap: 8px;
+    }
+    .couple-photo {
+        max-width: 220px;
+        margin-bottom: 8px;
+    }
+    .timer-section {
+        padding: 15px 12px;
+    }
+    .timer-section h2 {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+    .timer-display {
+        gap: 8px;
+    }
+    .timer-display span {
+        font-size: 2.5em;
+        min-width: 45px;
+    }
+    .timer-display .label {
+        font-size: 0.8em;
+    }
+    .date-info {
+        font-size: 0.75em;
+        margin-top: 8px;
+    }
+    .timer-section-date {
+        padding: 12px 12px;
+    }
+    .timer-section-date h2,
+    .timer-section-date .summary-phrase {
+        font-size: 1.1em;
+        margin-bottom: 8px;
+    }
+    .summary-values-vertical {
+        gap: 15px;
+    }
+    .summary-values-vertical span {
+        font-size: 1.8em;
+        min-width: 35px;
+    }
+    .summary-values-vertical .label {
+        font-size: 0.75em;
+    }
+    .timer-section::before {
+        font-size: 2.2em;
+        top: -10px;
+        left: -10px;
+    }
+    .timer-section::after {
+        font-size: 2.2em;
+        bottom: -10px;
+        right: -10px;
+    }
+    footer {
+        padding: 8px;
+        font-size: 0.8;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+    main {
+        margin-top: 45px;
+        gap: 5px;
+    }
+    .couple-photo {
+        max-width: 160px;
+        margin-bottom: 5px;
+    }
+    .timer-section {
+        padding: 15px 8px;
+    }
+    .timer-section h2 {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    .timer-display {
+        gap: 5px;
+    }
+    .timer-display span {
+        font-size: 2em;
+        min-width: 30px;
+    }
+    .timer-display .label {
+        font-size: 0.7em;
+    }
+    .date-info {
+        font-size: 0.65em;
+        margin-top: 5px;
+    }
+    .timer-section-date {
+        padding: 10px 8px;
+    }
+    .timer-section-date h2,
+    .timer-section-date .summary-phrase {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .summary-values-vertical {
+        gap: 10px;
+    }
+    .summary-values-vertical span {
+        font-size: 1.5em;
+        min-width: 25px;
+    }
+    .summary-values-vertical .label {
+        font-size: 0.65em;
+    }
+    .timer-section::before {
+        font-size: 1.5em;
+        top: -8px;
+        left: -8px;
+    }
+    .timer-section::after {
+        font-size: 1.5em;
+        bottom: -8px;
+        right: -8px;
+    }
+    footer {
+        padding: 5px;
+        font-size: 0.8em; 
+    }
+}
